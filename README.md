@@ -194,5 +194,22 @@ $ sudo dnf install faba-icon-theme.noarch moka-icon-theme.noarch echo-icon-theme
 
 ```
 
+*Fortune cookies in the terminal:*
+
+First things first:
+
+```bash
+$ sudo dnf install fortune-mod
+```
+
+Then add the following content to `~/.bashrc`:
+
+```bash
+if [ -f /usr/bin/fortune ]; then
+	/usr/bin/fortune
+	echo
+fi
+```
+
 To be continued.
 
