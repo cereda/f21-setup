@@ -211,5 +211,43 @@ if [ -f /usr/bin/fortune ]; then
 fi
 ```
 
+*Configure TeX Live:*
+
+Create a symbolic link:
+
+```bash
+$ sudo ln -s /usr/local/texlive/<year>/bin/<arch> /opt/texbin
+```
+
+Create a file named `texlive.sh` with the following content:
+
+```bash
+#!/bin/bash
+pathmunge () {
+	if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+		if [ "$2" = "after" ] ; then
+			PATH=$PATH:$1
+		else
+			PATH=$1:$PATH
+		fi
+	fi
+}
+pathmunge /opt/texbin
+unset pathmunge
+```
+
+Then move it to `/etc/profile.d/`:
+
+```bash
+$ sudo mv texlive.sh /etc/profile.d/
+```
+
+Then configure OpenType fonts from TeX Live:
+
+```bash
+$ sudo cp $(kpsewhich -var-value TEXMFSYSVAR)/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+$ sudo fc-cache -fsv
+```
+
 To be continued.
 
