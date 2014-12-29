@@ -168,9 +168,10 @@ Install Powerline fonts from `https://github.com/powerline/fonts`:
 
 ```bash
 $ wget https://github.com/powerline/fonts/archive/master.zip
-$ unzip fonts-master.zip
+$ unzip master.zip
 $ cd fonts-master/
 $ ./install.sh
+$ sudo fc-cache -fsv ~/.fonts
 ```
 
 Edit `~/.vimrc.before` and uncomment/edit:
@@ -247,6 +248,15 @@ Then configure OpenType fonts from TeX Live:
 ```bash
 $ sudo cp $(kpsewhich -var-value TEXMFSYSVAR)/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
 $ sudo fc-cache -fsv
+```
+
+*Make vim map default Windows shortcuts:*
+
+And add the following content to `~/.vimrc.local`:
+
+```bash
+source $VIMRUNTIME/mswin.vim
+behave mswin
 ```
 
 To be continued.
