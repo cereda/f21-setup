@@ -33,8 +33,8 @@ $ sudo dnf install google-chrome-stable_current_x86_64.rpm google-talkplugin_cur
 *Install the Adobe repository:*
 
 ```bash
-$ wget http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
-$ sudo dnf install adobe-release-i386-1.0-1.noarch.rpm
+$ http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+$ sudo dnf install adobe-release-x86_64-1.0-1.noarch.rpm
 ```
 
 *Install the Flash Player plugin:*
