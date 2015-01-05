@@ -33,7 +33,7 @@ $ sudo dnf install google-chrome-stable_current_x86_64.rpm google-talkplugin_cur
 *Install the Adobe repository:*
 
 ```bash
-$ http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+$ wget http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 $ sudo dnf install adobe-release-x86_64-1.0-1.noarch.rpm
 ```
 
