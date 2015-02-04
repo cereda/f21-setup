@@ -16,10 +16,20 @@ $ sudo dnf install rpmfusion-free-release-21.noarch.rpm rpmfusion-nonfree-releas
 
 *Add the Moka repository and install icon theme:*
 
+*Old reference (kept for historical purposes)*
+
 ```bash
 $ wget http://mokaproject.com/packages/rpm/moka-stable.repo
 $ sudo mv moka-stable.repo /etc/yum.repos.d/
 $ sudo dnf install faba-icon-theme faba-mono-icons
+```
+
+*New reference*
+
+```bash
+cd /etc/yum.repos.d/
+sudo wget http://download.opensuse.org/repositories/home:snwh:moka-project/Fedora_21/home:snwh:moka-project.repo
+sudo dnf install faba-icon-theme faba-mono-icons
 ```
 
 *Install Google Chrome and Voice and Video (repository is automatically added):*
