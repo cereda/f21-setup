@@ -198,6 +198,7 @@ And add the following content to `~/.vimrc.local`:
 
 ```bash
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+let g:neocomplcache_disable_auto_complete = 1
 ```
 
 *Install GTK themes and icons (and the proper GNOME extension):*
