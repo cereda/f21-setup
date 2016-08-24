@@ -1,3 +1,5 @@
+> This repository is outdated, kept only for historical purposes. The updated version of a proper Fedora 24 post installation is described in [`cereda/f24-postinstall](https://github.com/cereda/f24-postinstall).
+
 # My Fedora 21 setup
 
 *Upgrade everything:*
